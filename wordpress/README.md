@@ -8,9 +8,13 @@ docker service create --env WORDPRESS_DB_HOST=wpdb --env WORDPRESS_DB_PASSWORD=p
 ```
 
 # Local Development for Wordpress
+```
 docker-compose up
+```
 
 # Bundle & Deployment with Docker services
+```
 docker-compose bundle
 docker deploy -f docker.dsb myapp
 docker service update -p 80:80 myapp_web
+```
