@@ -1,0 +1,37 @@
+{
+  "services": {
+    "db": {
+      "Env": [
+        "MYSQL_ROOT_PASSWORD=password", 
+        "MYSQL_DATABASE=wordpress"
+      ], 
+      "Image": "mysql@sha256:a9a5b559f8821fe73d58c3606c812d1c044868d42c63817fa5125fd9d8b7b539", 
+      "Networks": [
+        "wp_net"
+      ], 
+      "Ports": [
+        {
+          "Port": 3306, 
+          "Protocol": "tcp"
+        }
+      ]
+    }, 
+    "web": {
+      "Env": [
+        "WORDPRESS_DB_HOST=db", 
+        "WORDPRESS_DB_PASSWORD=password"
+      ], 
+      "Image": "wordpress@sha256:42e78527eda069e20ff1759286ce809d910509380e836ea97794eb5fa6311447", 
+      "Networks": [
+        "wp_net"
+      ], 
+      "Ports": [
+        {
+          "Port": 80, 
+          "Protocol": "tcp"
+        }
+      ]
+    }
+  }, 
+  "version": "0.1"
+}
