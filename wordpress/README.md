@@ -16,5 +16,5 @@ docker-compose up
 ```
 docker-compose bundle
 docker deploy -f docker.dsb myapp
-docker service update -p 80:80 myapp_web
+docker service update -p 80:80 wp_web
 ```
