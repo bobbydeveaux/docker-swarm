@@ -1,3 +1,3 @@
 <?php
-
-echo "testing";
+echo "dev";
+var_dump($_SERVER);
