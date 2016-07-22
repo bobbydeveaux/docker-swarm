@@ -1,12 +1,5 @@
 version: "2"
 services:
-  #db:
-  #  image: mysql:latest
-  #  ports:
-  #    - "3306:3306"
-  #  environment:
-  #    - MYSQL_ROOT_PASSWORD=password
-  #    - MYSQL_DATABASE=mylamp
   php-fpm:
     build: ./docker/php-fpm
     image: bobbydvo/lemp_php-fpm:latest
